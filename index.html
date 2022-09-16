@@ -1,0 +1,201 @@
+<!-- TODO Color Correction Later -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Top Ranked Player</title>
+
+</head>
+
+<body>
+    <header class="backdrop-saturate-50 bg-white/30">
+        <section class="grid grid-cols-8 h-auto text-center">
+
+            <!-- Left Side Image section Start -->
+            <div class="text-2xl col-span-2 my-auto">
+                <img src="./images/banner/player-messi.png" alt="" srcset="">
+            </div>
+            <!-- Left Side Image section End -->
+
+            <div class="col-span-4 py-40">
+                <h1 class="text-7xl text-blue-900 font-serif font-semibold my-auto">Top Ranked Player</h1>
+                <p class="font-semibold mt-10 text-xl">The Best FIFA Men's Player is an association football award
+                    presented
+                    annually by the sport's governing body, FIFA, to the world's best men's player since 2016.</p>
+            </div>
+
+
+            <!-- Right side image section Start -->
+            <div class="text-2xl col-span-2 my-auto ">
+                <img class="h-auto " src="./images/banner/player-neymar.png" alt="" srcset="">
+            </div>
+            <!-- Right side image section Start -->
+        </section>
+    </header>
+
+
+    <!-- Main Section start -->
+    <main class="w-10/12 mx-auto grid grid-cols-12 mt-16">
+
+        <!-- Card Section Start -->
+        <section class="grid grid-cols-3  col-span-9 mb-36">
+            <div class="mt-2 mx-2 h-80 text-center border-2 shadow-xl">
+                <img class="mx-auto" src="./images/players/messi.jpg" alt="">
+                <h1 class="mt-2 text-2xl font-semibold">Lionel Andrés Messi</h1>
+                <h1 class="mt-2 text-xl font-semibold">Goal 500</h1>
+                <div class="grid">
+                    <button
+                        class=" mx-2 bg-blue-600 py-2 text-white mt-3 playerBtn hover:bg-blue-700 font-bold">SELECT</button>
+                </div>
+            </div>
+            <div class="mt-2 mx-2 h-80 text-center border-2 shadow-xl">
+                <img src="./images/players/neymar-jr.jpg" alt="">
+                <h1 class="mt-2 text-2xl font-semibold">Neymar Jr</h1>
+                <h1 class="mt-2 text-xl font-semibold">Goal 500</h1>
+                <div class="grid">
+                    <button
+                        class=" mx-2 bg-blue-600 py-2 text-white mt-3 playerBtn hover:bg-blue-700 font-bold">SELECT</button>
+                </div>
+            </div>
+            <div class="mt-2 mx-2 h-80 text-center border-2 shadow-xl">
+                <img src="./images/players/Kylian-Mbappé.jpeg" alt="">
+                <h1 class="mt-2 text-2xl font-semibold">Kylian Mbappé</h1>
+                <h1 class="mt-2 text-xl font-semibold">Goal 500</h1>
+                <div class="grid">
+                    <button
+                        class=" mx-2 bg-blue-600 py-2 text-white mt-3 playerBtn hover:bg-blue-700 font-bold">SELECT</button>
+                </div>
+            </div>
+            <div class="mx-2 mb-52 h-80 text-center border-2 shadow-xl">
+                <img src="./images/players/Vitor-Machado.jpg" alt="">
+                <h1 class="mt-2 text-2xl font-semibold">Vítor Machado</h1>
+                <h1 class="mt-2 text-xl font-semibold">Goal 500</h1>
+                <div class="grid">
+                    <button
+                        class=" mx-2 bg-blue-600 py-2 text-white mt-3 playerBtn hover:bg-blue-700 font-bold">SELECT</button>
+                </div>
+            </div>
+            <div class="mx-2 mb-52 h-80 text-center border-2 shadow-xl">
+                <img src="./images/players/sergio-ramos.jpg" alt="">
+                <h1 class="mt-2 text-2xl font-semibold">Sergio Ramos</h1>
+                <h1 class="mt-2 text-xl font-semibold">Goal 500</h1>
+                <div class="grid">
+                    <button
+                        class=" mx-2 bg-blue-600 py-2 text-white mt-3 playerBtn hover:bg-blue-700 font-bold">SELECT</button>
+                </div>
+            </div>
+            <div class="mx-2 mb-52 h-80 text-center border-2 shadow-xl">
+                <img src="./images/players/renato-sanches.jpg" alt="">
+                <h1 class="mt-2 text-2xl font-semibold">Renato Sanches</h1>
+                <h1 class="mt-2 text-xl font-semibold">Goal 500</h1>
+                <div class="grid">
+                    <button
+                        class=" mx-2 bg-blue-600 py-2 text-white mt-3 playerBtn hover:bg-blue-700 font-bold">SELECT</button>
+                </div>
+            </div>
+
+        </section>
+        <!-- Card Section End -->
+
+
+        <!-- Aside Section Start -->
+        <aside class="col-span-3 text-center ml-2">
+            <section class="bg-slate-500 h-72">
+                <h1 class="text-4xl text-white font-semibold mt-2">Selected <span id="selected-five">0</span></h1>
+                <!-- LIST START -->
+                <ol id='selected-player-list' type="1" class="text-white mt-6 grid grid-cols-7 ml-5 text-left">
+
+
+                    <!-- EMPTY SPACE FOR LIST -->
+                    <!-- EMPTY SPACE FOR LIST -->
+
+
+
+                </ol>
+                <!-- LIST END -->
+            </section>
+            <section class="bg-slate-500 h-auto mt-8 mb-64">
+
+
+                <!-- Per player div Start -->
+                <h1 class="text-white text-4xl font-semibold">Budget</h1>
+                <div class="grid grid-cols-2 mt-7">
+                    <span class="font-semibold my-auto text-xl col-span-1">Per Player</span> <input
+                        id='per-player-input-field' class="col-span-1 mr-5 py-2" type="text">
+                </div>
+                <!-- Per player div End -->
+
+
+                <!-- Calculate button div Start-->
+                <div class="grid">
+                    <button id="calculate-btn-for-player"
+                        class="mt-4 bg-blue-600 text-white  mx-5 py-2 rounded font-bold hover:bg-blue-700">Calculate</button>
+                </div>
+                <!-- Calculate button div End-->
+
+
+                <!-- per player Expenses Section Start -->
+                <p class="mt-2 font-bold text-xl">Player Expense <span id="player-expense">00</span><span>$</span>
+                </p>
+                <!-- per player Expenses Section End -->
+
+
+
+                <!-- Manager field div start -->
+                <div class="grid grid-cols-2 mt-3">
+                    <span class="font-semibold text-xl my-auto">Manager</span>
+                    <input id='manager-input-field' class="py-2 mr-5" type="text"><br>
+                </div>
+                <!-- Manager field div End -->
+
+
+                <!-- Coach Field div Start -->
+                <div class="grid grid-cols-2 mt-1">
+                    <span class="font-semibold text-xl my-auto">Coach</span> <input id='coach-input-field'
+                        class="py-2 mr-5" type="text"><br>
+                </div>
+                <!-- Coach Field div End -->
+
+
+                <!-- Total Calculate Button div Start -->
+                <div class="grid">
+                    <button id='total-calculate-btn'
+                        class="mt-2 bg-blue-600 text-white mx-5 py-2 rounded font-bold hover:bg-blue-700">Calculate</button>
+                </div>
+
+                <!-- Total Calculate Button div End -->
+
+
+                <!-- Total Amount Section Start -->
+                <div class="grid grid-cols-2 py-5">
+                    <p class="mt-2 font-semibold mx-14 text-xl">Total</p>
+                    <p class="mt-2 font-semibold"><span id="total-value"
+                            class="text-red-600 font-semibold text-xl">00</span><span
+                            class="text-red-600 font-semibold text-xl">$</span></p>
+                </div>
+                <!-- Total Amount Section End -->
+
+
+            </section>
+        </aside>
+        <!-- Aside Section End -->
+
+    </main>
+    <!-- Main Section End -->
+
+
+    <footer class="bg-slate-800 py-12">
+        <h1 class="text-white text-center font-thin">Copyright By Me 2022</h1>
+    </footer>
+
+
+    <!-- JS script Start-->
+    <script src="./index.js"></script>
+    <!-- JS script End-->
+</body>
+
+</html>
